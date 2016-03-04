@@ -1,0 +1,27 @@
+INDEX VERSION 1.126
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3024144294.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4031200329.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3019355512.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\139168375.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1495615573.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\684323140.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2209308809.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3588729910.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\452757840.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2391893646.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1349133881.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2917025568.index
+\ecommerce\src\main\java
+C:\workspace_carritoweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1655475348.index
+\ecommerce\src\main\java

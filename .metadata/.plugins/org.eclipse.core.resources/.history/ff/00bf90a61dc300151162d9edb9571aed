@@ -1,0 +1,57 @@
+package ar.com.templateit.ecommerce.action;
+
+import ar.com.templateit.cds.web.service.UsuarioEcommerce;
+import ar.com.templateit.cds.web.service.UsuarioEcommerceService;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class RegistrarseAction extends ActionSupport{
+
+	private static final long serialVersionUID = 2043223864854303676L;
+	private UsuarioEcommerce usuarioEcommerce;
+	private UsuarioEcommerceService usuarioServiceSoap;
+
+	public String loadRegistrarse() {
+		
+		this.usuarioEcommerce = new UsuarioEcommerce();
+		this.usuarioEcommerce.setApellido("");
+		this.usuarioEcommerce.setNombres("");
+		this.usuarioEcommerce.setEmail("");
+		this.usuarioEcommerce.setDni(new Long(0L));
+		this.usuarioEcommerce.setUsuario("");
+		this.usuarioEcommerce.setPassword("");
+		
+		return "loadRegistrarse";
+	}
+	
+	public String save() {
+		//TODO:guardar el usuario en la session y ver la cockie
+		
+		this.usuarioServiceSoap.save(this.getUsuarioEcommerce());
+		
+		return "home";
+		
+
+	}
+	
+
+
+	public UsuarioEcommerce getUsuarioEcommerce() {
+		return usuarioEcommerce;
+	}
+
+
+	public void setUsuarioEcommerce(UsuarioEcommerce usuarioEcommerce) {
+		this.usuarioEcommerce = usuarioEcommerce;
+	}
+
+
+
+	public void setUsuarioServiceSoap(UsuarioEcommerceService usuarioServiceSoap) {
+		this.usuarioServiceSoap = usuarioServiceSoap;
+	}
+		
+	
+	
+	
+}

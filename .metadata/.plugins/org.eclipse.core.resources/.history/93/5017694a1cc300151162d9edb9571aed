@@ -1,0 +1,65 @@
+package ar.com.templateit.ecommerce.action;
+
+import ar.com.templateit.cds.web.service.UsuarioEcommerce;
+import ar.com.templateit.cds.web.service.UsuarioEcommerceService;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class RegistrarseAction extends ActionSupport{
+
+	private static final long serialVersionUID = 2043223864854303676L;
+	private UsuarioEcommerce usuarioEcommerce;
+	private UsuarioEcommerceService usuarioServiceSoap;
+
+	public String loadRegistrarse() {
+		
+		this.usuarioEcommerce = new UsuarioEcommerce();
+		this.usuarioEcommerce.setApellido("");
+		this.usuarioEcommerce.setNombres("");
+		this.usuarioEcommerce.setEmail("");
+		this.usuarioEcommerce.setDni(new Long(0L));
+		this.usuarioEcommerce.setUsuario("");
+		this.usuarioEcommerce.setPassword("");
+		
+		return "loadRegistrarse";
+	}
+	
+	public String salve() {
+		
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		boolean flagUser = this.usuarioBO.validarUsuario(username.trim(),password.trim());
+		if (flagUser) {
+			Usuario usuario = this.usuarioBO.loadUsuario(this.username);
+			ActionContext.getContext().getSession().put("usuario", usuario);
+			return "home";
+		} else {
+			addActionError("usuario o password incorrecto!");
+			this.setError("usuario o password incorrecto!");
+			return "loadLogint";
+		}
+
+	}
+	
+
+
+	public UsuarioEcommerce getUsuarioEcommerce() {
+		return usuarioEcommerce;
+	}
+
+
+	public void setUsuarioEcommerce(UsuarioEcommerce usuarioEcommerce) {
+		this.usuarioEcommerce = usuarioEcommerce;
+	}
+
+
+
+	public void setUsuarioServiceSoap(UsuarioEcommerceService usuarioServiceSoap) {
+		this.usuarioServiceSoap = usuarioServiceSoap;
+	}
+		
+	
+	
+	
+}

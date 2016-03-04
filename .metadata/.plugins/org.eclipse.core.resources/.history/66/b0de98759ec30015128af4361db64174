@@ -1,0 +1,40 @@
+package ar.com.templateit.ecommerce.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction extends ActionSupport{
+
+	private static final long serialVersionUID = 2043223864854303676L;
+	
+	private String usuario;
+	private String password;
+
+	public String loadLogin() {
+		
+		return "loadLogin";
+	}
+	
+	public String validar(){
+		
+		return "home";
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+		
+	
+}

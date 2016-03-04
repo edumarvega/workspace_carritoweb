@@ -1,0 +1,48 @@
+package ar.com.templateit.ecommerce.action;
+
+import ar.com.templateit.cds.web.service.UsuarioEcommerce;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class RegistrarseAction extends ActionSupport{
+
+	private static final long serialVersionUID = 2043223864854303676L;
+	private UsuarioEcommerce usuarioEcommerce;
+
+	public String loadRegistrarse() {
+		
+		this.usuarioEcommerce = new UsuarioEcommerce();
+		this.usuarioEcommerce.setApellido("");
+		this.usuarioEcommerce.setNombres("");
+		this.usuarioEcommerce.setEmail("");
+		this.usuarioEcommerce.setDni(new Long(0L));
+		this.usuarioEcommerce.setUsuario("");
+		this.usuarioEcommerce.setPassword("");
+		
+		return "loadRegistrarse";
+	}
+	
+	
+	public String loadNewUsuario() {
+		this.permisos = this.roleBO.loadAllRole();
+		this.setDefaultPermiso("-1");
+		this.usuario = new Usuario();
+		this.usuario.setUsuario("");
+		this.usuario.setPassword("");
+		this.usuario.setHabilitado(true);
+		return "loadNewUsuario";
+	}
+
+
+	public UsuarioEcommerce getUsuarioEcommerce() {
+		return usuarioEcommerce;
+	}
+
+
+	public void setUsuarioEcommerce(UsuarioEcommerce usuarioEcommerce) {
+		this.usuarioEcommerce = usuarioEcommerce;
+	}
+		
+	
+	
+}

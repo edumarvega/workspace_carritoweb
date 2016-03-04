@@ -1,0 +1,69 @@
+package ar.com.templateit.ecommerce.action;
+
+import ar.com.templateit.cds.web.service.UsuarioEcommerce;
+import ar.com.templateit.cds.web.service.UsuarioEcommerceService;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction extends ActionSupport{
+
+	private static final long serialVersionUID = 2043223864854303676L;
+	
+	public static final String MENSAJE_ERROR = "Usuario o password incorrecto!!";
+	private String usuario;
+	private String password;
+	private String error;
+	private UsuarioEcommerceService usuarioEcommerceServiceSoap;
+
+	public String loadLogin() {
+		
+		return "loadLogin";
+	}
+	
+	public String validar(){
+		UsuarioEcommerce usuario = this.usuarioEcommerceServiceSoap.loadUsuarioEcommerce(this.usuario.trim(), this.password.trim());
+		
+		if(usuario!=null){
+			return "home";
+		}
+		else{
+			addActionError("usuario o password incorrecto!");
+			this.setError("usuario o password incorrecto!");
+			return "loadLogin";
+		}
+		
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setUsuarioEcommerceServiceSoap(
+			UsuarioEcommerceService usuarioEcommerceServiceSoap) {
+		this.usuarioEcommerceServiceSoap = usuarioEcommerceServiceSoap;
+	}
+
+	public String getError() {
+		return error;
+	}
+
+	public void setError(String error) {
+		this.error = error;
+	}
+
+	
+		
+	
+}

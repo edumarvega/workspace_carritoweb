@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schema/jaxws.xsd">
+   
+ 
+ <!-- <bean id="service1Soap" class="org.tempuri.Service1Soap"
+  factory-bean="clientFactoryService1Soap" factory-method="create" />
+
+ <bean id="clientFactoryService1Soap" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+  <property name="serviceClass" value="org.tempuri.Service1Soap" />
+  <property name="address" value="${webservices.endpoint}" />
+ </bean> -->
+ 
+ <bean id="productoServiceSoap" class="ar.com.templateit.cds.web.service.ProductoService"
+  factory-bean="clientFactoryProductoServiceSoap" factory-method="create" />
+
+ <bean id="clientFactoryProductoServiceSoap" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+  <property name="serviceClass" value="ar.com.templateit.cds.web.service.ProductoService" />
+  <property name="address" value="${producto.webservices.endpoint}" />
+ </bean>
+ 
+ <bean id="categoriaServiceSoap" class="ar.com.templateit.cds.web.service.CategoriaService"
+  factory-bean="clientFactoryCategoriaServiceSoap" factory-method="create" />
+
+ <bean id="clientFactoryCategoriaServiceSoap" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+  <property name="serviceClass" value="ar.com.templateit.cds.web.service.CategoriaService" />
+  <property name="address" value="${categoria.webservices.endpoint}" />
+ </bean>
+ 
+ <bean id="usuarioServiceSoap" class="ar.com.templateit.cds.web.service.UsuarioService"
+  factory-bean="clientFactoryUsuarioServiceSoap" factory-method="create" />
+
+ <bean id="clientFactoryUsuarioServiceSoap" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+  <property name="serviceClass" value="ar.com.templateit.cds.web.service.UsuarioService" />
+  <property name="address" value="${categoria.webservices.endpoint}" />
+ </bean>
+
+</beans>

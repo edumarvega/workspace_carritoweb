@@ -1,0 +1,146 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ include file="/pages/template/taglibs.jsp" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Login-E-commerce</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%@ include file="/pages/template/common-header.jsp" %>
+	<style type="text/css">
+		header{
+    		background-color: #5bc0de;
+		}
+		
+		.texto-titulo{
+			color:#2aabd2; 
+			font-size: 17px; 
+			font-weight:bold;
+		}
+
+		
+		
+	</style>
+	<script type="text/javascript">
+  		$(document).ready(function(){
+			
+  		});
+  	</script>
+</head>
+
+<body>
+	
+	<header>
+		<img src="img/logomym.png" alt="logo" class="img-responsive">
+        
+    </header>
+
+         <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <h3><strong>Nuevo reclamo</strong></h3>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <form class="form-horizontal" role="form" action="">
+                        <div class="form-group">
+                            <label for="usuario" class="col-md-4 col-lg-4 control-label">Usuario:</label>
+                            <div class="col-md-3 col-lg-3">
+                                <input type="text" class="form-control" id="usuario" name="usurio"  value="" autofocus required>
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="nombres" class="col-md-4 col-lg-4 control-label">Contraseña:</label>
+                            <div class="col-md-4 col-lg-4">
+                                <input type="text" class="form-control" id="nombres" name="proveedor.nombreRazonSocial" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dni" class="col-md-4 col-lg-4 control-label">Dni:</label>
+                            <div class="col-md-2 col-lg-2">
+                                <input type="text" class="form-control" id="dni" name="proveedor.nombreRazonSocial" value="" required>
+                            </div>
+                        </div>
+
+                                        
+                        <div class="form-group">
+                            <label for="direccion" class="col-md-4 col-lg-4 control-label">Direccion:</label>
+                            <div class="col-md-5 col-lg-5">
+                                <input type="text" class="form-control" id="direccion"  name="proveedor.domicilio" value="" required>
+                            </div>
+                        </div>
+        
+                        
+                        <div class="form-group">
+                            <label for="telefono" class="col-md-4 col-lg-4 control-label">Barrio:</label>
+                                <div class="col-md-2 col-lg-2">
+                                <select class="form-control" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="volvo">Sta.Barbara</option>
+                                    <option value="saab">9 de Julio</option>
+                                    <option value="saab">San Jose</option>
+                                    <option value="saab">Las tipas</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono" class="col-md-4 col-lg-4 control-label">Telefono:</label>
+                            <div class="col-md-2 col-lg-2">
+                                <input type="text" class="form-control" id="telefono"  name="proveedor.telefono" value="" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="col-md-4 col-lg-4 control-label">Email</label>
+                            <div class="col-md-3 col-lg-3">
+                                <input type="email" class="form-control" id="email"  name="email" value="" >
+                            </div>
+                        </div>
+                                
+                        <div class="form-group">
+                            <label for="tipoReclamo" class="col-md-4 col-lg-4 control-label">Tipo de reclamo:</label>
+                            <div class="col-md-2 col-lg-2">
+                                <select class="form-control" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="saab">Poda de árboles</option>
+                                    <option value="volvo">Iluminacion</option>
+                                    <option value="volvo">Desperfecto semaforo</option>
+                                    <option value="volvo">Recoleccion residuos</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="observaciones" class="col-md-4 col-lg-4 control-label">Descripción del reclamo:</label>
+                            <div class="col-md-5 col-lg-5">
+                                <textarea class="form-control input-sm" rows="3" name="proveedor.observaciones" required></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="button" class="col-md-4 col-lg-4 control-label"></label>
+                            <div class="col-md-4 col-lg-4">
+                                <button type="submit" class="btn btn-success">Aceptar</button>
+                            </div>
+                        </div>  
+
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p class="text-center">Desarrollado por www.templateit.com.ar</p>
+        </footer>
+	    
+</body>
+</html>
